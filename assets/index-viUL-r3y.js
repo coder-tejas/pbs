@@ -5,7 +5,7 @@
   new MutationObserver(l => {
     for (const o of l)
       if (o.type === 'childList')
-        for (const i of o.addedNodes)
+        for (const i of o.addedNodes)    
           i.tagName === 'LINK' && i.rel === 'modulepreload' && r(i)
   }).observe(document, { childList: !0, subtree: !0 })
   function t (l) {
